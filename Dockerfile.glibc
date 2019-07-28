@@ -1,0 +1,26 @@
+FROM golang:stretch AS build
+
+ARG VERSION="0.3.3"
+ARG CHECKSUM="477585ca5397228ba6bbf11f307fefb99643ddaecfbfd2ca412a27500a101ecb"
+
+ADD https://github.com/kubernetes-incubator/metrics-server/archive/v$VERSION.tar.gz /tmp/metrics-server.tar.gz
+
+RUN [ "$CHECKSUM" = "$(sha256sum /tmp/metrics-server.tar.gz | awk '{print $1}')" ] && \
+    mkdir -p /go/src/github.com/kubernetes-incubator && \
+    tar -C /go/src/github.com/kubernetes-incubator -xf /tmp/metrics-server.tar.gz && \
+    mv /go/src/github.com/kubernetes-incubator/metrics-server-$VERSION /go/src/github.com/kubernetes-incubator/metrics-server
+
+RUN cd /go/src/github.com/kubernetes-incubator/metrics-server && \
+      go run vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go --logtostderr -i k8s.io/metrics/pkg/apis/metrics/v1beta1,k8s.io/apimachinery/pkg/apis/meta/v1,k8s.io/apimachinery/pkg/api/resource,k8s.io/apimachinery/pkg/version -p github.com/kubernetes-incubator/metrics-server/pkg/generated/openapi/ -O zz_generated.openapi -h /go/src/github.com/kubernetes-incubator/metrics-server/hack/boilerplate.go.txt -r /dev/null && \
+      CGO_ENABLED=0 go build -o /tmp/metrics-server github.com/kubernetes-incubator/metrics-server/cmd/metrics-server
+
+
+FROM scratch
+
+COPY --from=build /tmp/metrics-server /
+
+COPY --chown=100:100 rootfs /
+
+USER 100:100
+ENTRYPOINT ["/metrics-server"]
+CMD ["--logtostderr", "--secure-port=8443"]
