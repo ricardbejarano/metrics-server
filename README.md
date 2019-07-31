@@ -1,6 +1,6 @@
-<p align=center><img src=https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/198/chart-with-upwards-trend_1f4c8.png width=120px></p>
-<h1 align=center>metrics-server (container image)</h1>
-<p align=center>Minimal container image of Kubernetes' <a href=https://github.com/kubernetes-incubator/metrics-server>metrics-server</a></p>
+<p align="center"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/198/chart-with-upwards-trend_1f4c8.png" width="120px"></p>
+<h1 align="center">metrics-server (container image)</h1>
+<p align="center">Built-from-source container image of Kubernetes' <a href="https://github.com/kubernetes-incubator/metrics-server">metrics-server</a></p>
 
 
 ## Tags
@@ -22,11 +22,11 @@ Available on [Quay](https://quay.io) as:
 
 ## Features
 
-* Super tiny (`glibc`-based is `~53.5MB` and `musl`-based is `~53.5MB`)
+* Super tiny (about `53.5MB`)
 * Compiled from source during build time
-* Binary pulled from official website
-* Built `FROM scratch`, see [Filesystem](#filesystem) for an exhaustive list of the image's contents
+* Built `FROM scratch`, with zero bloat (see [Filesystem](#filesystem))
 * Reduced attack surface (no shell, no UNIX tools, no package manager...)
+* Runs as unprivileged (non-`root`) user
 
 
 ## Building
@@ -35,32 +35,20 @@ Available on [Quay](https://quay.io) as:
 - To build the `musl`-based image: `docker build -t metrics-server:musl -f Dockerfile.musl .`
 
 
+## Deploying
+
+To deploy `metrics-server` to your Kubernetes cluster, run:
+
+```bash
+kubectl apply -f ./kubernetes
+```
+
+
 ## Filesystem
 
-The images' contents are:
-
-### `glibc`
-
-Based on the [glibc](https://www.gnu.org/software/libc/) implementation of `libc`. Dynamically linked.
-
 ```
 /
 ├── apiserver.local.config/
-│   └── .keep
-├── etc/
-│   ├── group
-│   └── passwd
-└── metrics-server
-```
-
-### `musl`
-
-Based on the [musl](https://www.musl-libc.org/) implementation of `libc`. Statically linked.
-
-```
-/
-├── apiserver.local.config/
-│   └── .keep
 ├── etc/
 │   ├── group
 │   └── passwd
