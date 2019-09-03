@@ -1,4 +1,4 @@
-FROM golang:1.12.7-alpine AS build
+FROM golang:1-alpine AS build
 
 ARG VERSION="0.3.3"
 ARG CHECKSUM="9a8a204a46a4159f5a6bcb508cc51b49cdfb15aa5a034c7910ddca5a435097d4"
