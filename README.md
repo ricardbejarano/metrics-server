@@ -9,15 +9,15 @@
 
 Available on [Docker Hub](https://hub.docker.com) as [`ricardbejarano/metrics-server`](https://hub.docker.com/r/ricardbejarano/metrics-server):
 
-- [`0.3.3-glibc`, `0.3.3`, `glibc`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.glibc)
-- [`0.3.3-musl`, `musl` *(Dockerfile.musl)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.musl)
+- [`0.3.5-glibc`, `0.3.5`, `glibc`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.glibc)
+- [`0.3.5-musl`, `musl` *(Dockerfile.musl)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.musl)
 
 ### Quay
 
 Available on [Quay](https://quay.io) as:
 
-- [`quay.io/ricardbejarano/metrics-server-glibc`](https://quay.io/repository/ricardbejarano/metrics-server-glibc), tags: [`0.3.3`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.glibc)
-- [`quay.io/ricardbejarano/metrics-server-musl`](https://quay.io/repository/ricardbejarano/metrics-server-musl), tags: [`0.3.3`, `master`, `latest` *(Dockerfile.musl)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.musl)
+- [`quay.io/ricardbejarano/metrics-server-glibc`](https://quay.io/repository/ricardbejarano/metrics-server-glibc), tags: [`0.3.5`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.glibc)
+- [`quay.io/ricardbejarano/metrics-server-musl`](https://quay.io/repository/ricardbejarano/metrics-server-musl), tags: [`0.3.5`, `master`, `latest` *(Dockerfile.musl)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.musl)
 
 
 ## Features
