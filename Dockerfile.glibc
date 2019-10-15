@@ -1,7 +1,7 @@
 FROM golang:1 AS build
 
-ARG VERSION="0.3.5"
-ARG CHECKSUM="42e0ace87857ece101fdacb68e435d6aac689e27d4fbcdc2be6c52ad3ef08d38"
+ARG VERSION="0.3.6"
+ARG CHECKSUM="cb0626b297eeb14be20f53896bc0cd68b32d20a4e4b6c8becdef625e322a54ed"
 
 ADD https://github.com/kubernetes-incubator/metrics-server/archive/v$VERSION.tar.gz /tmp/metrics-server.tar.gz
 
