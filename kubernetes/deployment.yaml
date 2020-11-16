@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: metrics-server
-          image: docker.io/ricardbejarano/metrics-server:0.3.6-musl
+          image: docker.io/ricardbejarano/metrics-server:0.4.0-musl
           args:
             - --logtostderr
             - --secure-port=8443

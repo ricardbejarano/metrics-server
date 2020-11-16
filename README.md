@@ -9,15 +9,15 @@
 
 Available on [Docker Hub](https://hub.docker.com) as [`ricardbejarano/metrics-server`](https://hub.docker.com/r/ricardbejarano/metrics-server):
 
-- [`0.3.6-glibc`, `0.3.6`, `glibc`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.glibc) (about `49.4MB`)
-- [`0.3.6-musl`, `musl` *(Dockerfile.musl)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.musl) (about `49.4MB`)
+- [`0.4.0-glibc`, `0.4.0`, `glibc`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.glibc) (about `49.4MB`)
+- [`0.4.0-musl`, `musl` *(Dockerfile.musl)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.musl) (about `49.4MB`)
 
 ### Quay
 
 Available on [Quay](https://quay.io) as:
 
-- [`quay.io/ricardbejarano/metrics-server`](https://quay.io/repository/ricardbejarano/metrics-server), [`quay.io/ricardbejarano/metrics-server-glibc`](https://quay.io/repository/ricardbejarano/metrics-server-glibc), tags: [`0.3.6`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.glibc) (about `49.4MB`)
-- [`quay.io/ricardbejarano/metrics-server-musl`](https://quay.io/repository/ricardbejarano/metrics-server-musl), tags: [`0.3.6`, `master`, `latest` *(Dockerfile.musl)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.musl) (about `49.4MB`)
+- [`quay.io/ricardbejarano/metrics-server`](https://quay.io/repository/ricardbejarano/metrics-server), [`quay.io/ricardbejarano/metrics-server-glibc`](https://quay.io/repository/ricardbejarano/metrics-server-glibc), tags: [`0.4.0`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.glibc) (about `49.4MB`)
+- [`quay.io/ricardbejarano/metrics-server-musl`](https://quay.io/repository/ricardbejarano/metrics-server-musl), tags: [`0.4.0`, `master`, `latest` *(Dockerfile.musl)*](https://github.com/ricardbejarano/metrics-server/blob/master/Dockerfile.musl) (about `49.4MB`)
 
 
 ## Features
