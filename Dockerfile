@@ -1,7 +1,7 @@
 FROM golang:1-alpine AS build
 
-ARG VERSION="0.4.3"
-ARG CHECKSUM="67c7a4e9548ffd0901cec217d373bb89ca96d4c75755bd86f9fcd344fbe6e8d2"
+ARG VERSION="0.4.4"
+ARG CHECKSUM="d13627095ff97736a06301ea589f0c893b6898d4a758011bc9a28cb491f45472"
 
 ADD https://github.com/kubernetes-sigs/metrics-server/archive/v$VERSION.tar.gz /tmp/metrics-server.tar.gz
 
