@@ -20,10 +20,10 @@
 
 Available on Docker Hub as [`docker.io/ricardbejarano/metrics-server`](https://hub.docker.com/r/ricardbejarano/metrics-server):
 
-- [`0.6.3`, `latest` *(Dockerfile)*](Dockerfile)
+- [`0.6.4`, `latest` *(Dockerfile)*](Dockerfile)
 
 ### RedHat Quay
 
 Available on RedHat Quay as [`quay.io/ricardbejarano/metrics-server`](https://quay.io/repository/ricardbejarano/metrics-server):
 
-- [`0.6.3`, `latest` *(Dockerfile)*](Dockerfile)
+- [`0.6.4`, `latest` *(Dockerfile)*](Dockerfile)
